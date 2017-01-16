@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace TestConsole
 {
@@ -10,6 +7,13 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            Trace.WriteLine("Application started.", "MyApp");
+            Trace.WriteLine("working...", "MyApp");
+            Trace.WriteLine("Application finished.", "MyApp");
+
+            Trace.Flush();
+            Console.WriteLine("Press any key to quit");
+            Console.ReadKey(true);
         }
     }
 }
